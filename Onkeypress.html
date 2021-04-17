@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On Keypress</title>
+	<script type="text/javascript">
+		function demo() 
+		{
+			var demo;
+			demo = document.getElementById('t').value;
+			document.getElementById('spn').innerHTML = demo;	
+		}
+	</script>
+</head>
+<body>
+	<div align="center" style="">
+	<input type="text" style="font-size: 25px;border-style: solid; border-color: blue;margin-top: 130px;" name="text" id="t" onkeypress="demo()" />
+	<span id="spn" style="font-size: 25px;color: red;"></span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<script type="text/javascript">
+		function tbl()
+		 {
+		 // 	alert("hello");
+			// var data;
+			var data=prompt("Enter Number");
+			var n=prompt("Enter iteration");
+			for(var i=1;i<=n;i++)
+			{
+				document.write(data+"x"+i+"="+(i*data));
+				document.write('<br>');
+			
+			}
+		}
+	</script>
+</head>
+<body>
+	<div  align="center" style="margin-top: 20px;">
+			<button onclick="tbl()" style="background-color: black;color: white; font-size: 25px;padding: 10px; ">Generate Multiplication Table</button>
+	</div>
+</body>
+</html>

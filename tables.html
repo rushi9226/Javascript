@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MULTIPLICATION TABLE</title>
+	<script type="text/javascript">
+		function calculate() 
+		{
+			var v1,v2,i,j;
+			v1=parseInt(document.getElementById('from').value);
+			v2=parseInt(document.getElementById('to').value);
+			console.log(v1 + ""+v2);
+
+			for(i=v1;i<=v2;i++)
+			{
+				for(j=1;j<=10;j++)
+				{
+					//alert(v2);
+					document.write(i+"x"+j+"="+(i*j));
+					//alert(v2);
+					document.write('<br>');
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div align="center" style="color: black;font-size: 20px;margin-top: 30px;">
+		From<span>:</span><span><input id="from" type="number" style="border-style: solid; color: black;" name="num"></span>
+		<br>
+		To<span>:</span><span><input type="number" id="to" style="border-style: solid; color: black" name="num"></span>
+		<br>
+		<input type="submit" name="submit" style="background-color: blue;color: white;" onclick="calculate()" value="Print">
+	</div>
+</body>
+</html>

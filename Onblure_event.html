@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ONBLURE</title>
+	<script type="text/javascript">
+		function demo()
+		{
+			var name;
+			name = document.getElementById('name').value;
+			if(name.length == 0)
+			{
+				document.getElementById('spn').innerHTML = "Name can not be blank";
+			}	
+		}
+	</script>
+</head>
+<body>
+	<div align="center" style="margin-top: 150px;">
+		<span style="color: red;" id="spn"></span>
+		<input type="text" name="text" style="font-size: 30px;padding: 10px;"  id="name" onblur="demo()" placeholder="Enter Your Name">
+		<br>
+		<input type="text" name="name" id="uname" style="font-size: 30px;padding: 10px;" placeholder="Enter Your Uname" onblur="demo()">
+		</div>
+</body>
+</html>

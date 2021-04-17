@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<script type="text/javascript">
+		function calculator(e)
+	{
+			var v1 ;
+			v1 = e.value;
+			// alert(v1);
+			// console.log(v1);
+
+			document.getElementById('txt').value += v1;
+	}
+
+		function clearall() 
+		{
+			document.getElementById('txt').value = ' ';
+		}
+
+		function calculate() 
+		{
+			var v2,n1,n2,temp,result;
+			v2=document.getElementById('txt').value;
+			if(v2.indexOf("+")>0)
+			{
+				temp=v2.indexOf('+');
+				n1=v2.slice(0,temp);
+				n2=v2.slice(temp+1,v2.length);
+				result=parseInt(n1)+parseInt(n2);
+				document.getElementById('txt').value = result;
+			}
+			if(v2.indexOf("-")>0)
+			{
+				temp=v2.indexOf('-');
+				n1=v2.slice(0,temp);
+				n2=v2.slice(temp+1,v2.length);
+				result=parseInt(n1)-parseInt(n2);
+				document.getElementById('txt').value = result;
+			}
+			if(v2.indexOf("x")>0)
+			{
+				temp=v2.indexOf('x');
+				n1=v2.slice(0,temp);
+				n2=v2.slice(temp+1,v2.length);
+				result=parseInt(n1)*parseInt(n2);
+				document.getElementById('txt').value = result;
+			}
+			if(v2.indexOf("/")>0)
+			{
+				temp=v2.indexOf('/');
+				n1=v2.slice(0,temp);
+				n2=v2.slice(temp+1,v2.length);
+				result=parseInt(n1)/parseInt(n2);
+				document.getElementById('txt').value = result;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div align="center" style="font-size: 40px;color: blue;margin-top: 130px;">
+		Calculator
+	</div>
+	<div align="center" >
+		<input style="border-style: solid; border-width: 4px; border-color: black; font-size: 25px;" type="text" name="text" id="txt"  />
+	</div>
+	<div align="center" style="margin-top: 20px;">
+		<button style="background-color: #3FDADF;font-size: 20px;" value="7" onclick="calculator(this)">7</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="8" onclick="calculator(this)">8</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="9" onclick="calculator(this)">9</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="/" onclick="calculator(this)">/</button>
+	</div>
+	<div align="center" style="margin-top: 20px;">
+		<button style="background-color: #3FDADF;font-size: 20px;" value="4" onclick="calculator(this)">4</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="5" onclick="calculator(this)">5</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="6" onclick="calculator(this)">6</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="x" onclick="calculator(this)">x</button>
+	</div>
+	<div align="center" style="margin-top: 20px;">
+		<button style="background-color: #3FDADF;font-size: 20px;" value="1" onclick="calculator(this)">1</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="2" onclick="calculator(this)">2</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="3"  onclick="calculator(this)">3</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="+" onclick="calculator(this)">+</button>
+	</div>
+	<div align="center" style="margin-top: 20px;">
+		<button style="background-color: #3FDADF; font-size: 20px;"  onclick="clearall()">C</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="0" onclick="calculator(this)">0</button>
+		<button style="background-color: #3FDADF;font-size: 20px;"  onclick="calculate()">=</button>
+		<button style="background-color: #3FDADF;font-size: 20px;" value="-" onclick="calculator(this)">-</button>
+	</div>
+</body>
+</html>

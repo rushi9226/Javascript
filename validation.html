@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Validation</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function validation() 
+		{
+			var email = $('#email').val();
+			alert(email);
+			var regular=/^([A-Za-z0-9\._\-])+\@([A-Za-z0-9])+\.([A-Za-z]{2,4})$/;
+
+			if(regular.test(email)== false)
+			{
+				alert("email is invalid");
+			}
+			else
+			{
+				alert("email is valid");
+			}
+
+			var pass= $('#password').val();
+			alert(pass);
+
+			var val=/^(?=.*[0-9])(?=.*[!@#$%^&*])([A-Za-z0-9\._\-!#&*!@$%^]{8,30})$/;
+
+			if(val.test(pass)== false)
+			{
+				alert("password is invalid");
+			}
+			else
+			{
+				alert("password is valid");
+			}
+
+
+
+		}
+	</script>
+</head>
+<body>
+	<div align="center"  style="margin-top: 200px;">
+		<div>
+	<input type="text" name="email" id="email">
+	</div >
+	<div style="margin-top: 20px;">
+	<input type="text" name="pass" id="password">
+	</div>
+	<div style="margin-top: 20px;">
+	<button name="submit" id="sub" style="background-color: black;color: white;" onclick="validation()">Submit</button>
+	</div>
+</div>
+</body>
+</html>
